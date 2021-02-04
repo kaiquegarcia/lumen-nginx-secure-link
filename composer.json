@@ -1,0 +1,40 @@
+{
+  "name": "kaiquegarcia/lumen-nginx-secure-link",
+  "description": "Trait to easily adapt a Lumen/Laravel project for using NGINX secure link",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kaique Garcia",
+      "email": "me@kaiquegarcia.dev"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.4",
+    "illuminate/support": "^5.2"
+  },
+  "require-dev": {
+    "laravel/lumen-framework": "^5.3",
+    "phpunit/phpunit": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Nginx\\SecureLink\\": "src/"
+    },
+    "files": [
+      "bootstrap/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Nginx\\SecureLink\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Nginx\\SecureLink\\Providers\\SecureLinkServiceProvider"
+      ]
+    }
+  }
+}
