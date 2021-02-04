@@ -14,7 +14,7 @@ class TraitTests extends TestCase
         $model->link = $link;
         $secure_link = $model->secure_link;
         $this->assertStringStartsWith($link, $secure_link);
-        $this->assertContains('?md5=', $secure_link);
-        $this->assertContains('&expires=', $secure_link);
+        $this->assertStringContainsString('?md5=', $secure_link);
+        $this->assertStringContainsString('&expires=', $secure_link);
     }
 }
